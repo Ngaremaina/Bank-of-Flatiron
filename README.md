@@ -19,7 +19,7 @@ To run this application:
 
 *Run this command to start the json server: *json-server --watch db.json 
 
-Run this command to start the React Application: *npm start
+*Run this command to start the React Application: *npm start
 
 # Author #
 Owen Ngare
