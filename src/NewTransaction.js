@@ -1,34 +1,37 @@
 import React,{useState} from "react";
 
-function NewTransaction({onTransactionSubmit, transactions}){
+function NewTransaction({onTransactionSubmit}){
+    //Declaring the variables 
     const [description, setDescription] = useState("")
     const [amount, setAmount] = useState("")
     const [date, setDate] = useState("")
     const [category, setCategory]=useState("")
 
-    // const displayCategories = transactions.map((item) =>{  
-    //     return <option>{item.category}</option>  
-    // })
-
+    //Defining the submit function that will be called when the form is submitted
     function handleSubmit(e){
         e.preventDefault()
-       
+
+        //Defining the object containing data that will be passed to our json server
         const newTransaction = {
             amount:amount,
             description:description,
             date:date,
             category:category
         }
+
+        //returning fetch function that will POST the data added
         fetch("http://localhost:3000/transactions",{
             method:"POST", 
             headers:{"Content-Type":"application/json"},
             body:JSON.stringify(newTransaction)
         })
         .then(res => res.json())
+        //calling the submit function that will submit the new transaction
         .then(data => onTransactionSubmit(data))
     }
     return (
-        <form className="addNewTransaction" onSubmit={handleSubmit}>
+        //displaying the form that will add a new transaction
+        <form className="addNewTransaction" onSubmit={handleSubmit} id="add Transaction">
             <h2>Add New Transaction</h2>
             <label>Date</label> 
             <input type="date" value={date} onChange={e => setDate(e.target.value)}/>
@@ -41,7 +44,7 @@ function NewTransaction({onTransactionSubmit, transactions}){
             
             <label>Categories
                 <select value={category} onChange={e => setCategory(e.target.value)}>
-                    {/* {displayCategories} */}
+                    
                     <option>Food</option>
                     <option>Income</option>
                     <option>Fashion</option>
