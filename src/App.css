@@ -13,6 +13,8 @@
 .nav-bar-right{
   float: right;
 }
+
+
 #customers {
   font-family: Arial, Helvetica, sans-serif;
   border-collapse: collapse;
@@ -37,6 +39,13 @@
   text-align: left;
   background-color: blue;
   color: white;
+}
+
+.deletebutton{
+  font-size: 18px;
+}
+.deletebutton:hover{
+  background-color: red;
 }
 
 .addNewTransaction{
@@ -70,3 +79,4 @@
 .addNewTransaction button:hover{
   background-color: aqua;
 }
+

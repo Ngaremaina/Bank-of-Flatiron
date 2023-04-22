@@ -97,13 +97,6 @@
       "category": "Food",
       "amount": "3000",
       "id": 14
-    },
-    {
-      "amount": "100000",
-      "description": "Creating Bank of Flatiron",
-      "date": "2023-04-22",
-      "category": "Income",
-      "id": 15
     }
   ]
 }

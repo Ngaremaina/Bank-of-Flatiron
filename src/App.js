@@ -18,17 +18,21 @@ function App() {
   const handleAddTransaction = (newTransaction) => {
     setTransactions([...transactions, newTransaction])
   }
+
   const fetchDescription = (search) => {
     const fetchResults = transactions.filter(transaction => transaction.description === search)
-    setTransactions(fetchResults)
-    
+    setTransactions(fetchResults)   
+  }
+
+  const handleDeleteTransaction = (deletedTransaction) => {
+    setTransactions(transactions.filter((transaction) => transaction.id !== deletedTransaction));
   }
 
 
   return (
     <div className="App">
       <Header getDescription = {fetchDescription}/>
-      <TransactionList transactions = {transactions}/>
+      <TransactionList transactions = {transactions} onDeleteTransaction={handleDeleteTransaction}/>
       <NewTransaction transactions = {transactions} onTransactionSubmit={handleAddTransaction}/>
     </div>
   );
