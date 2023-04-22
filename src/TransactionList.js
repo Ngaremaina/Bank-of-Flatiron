@@ -2,7 +2,7 @@ import React from "react";
 import TransactionItem from "./TransactionItem";
 
 function TransactionList({transactions}){
-    console.log(transactions)
+    // console.log(transactions)
     const displayTransactions = transactions.map(transaction => {
        return <TransactionItem key={transaction.id} id = {transaction.id} amount = {transaction.amount} category = {transaction.category} date = {transaction.date} description = {transaction.description}/>
     })

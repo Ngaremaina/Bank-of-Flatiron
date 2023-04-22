@@ -10,6 +10,9 @@
   padding: 10px;
 }
 
+.nav-bar-right{
+  float: right;
+}
 #customers {
   font-family: Arial, Helvetica, sans-serif;
   border-collapse: collapse;
@@ -34,4 +37,36 @@
   text-align: left;
   background-color: blue;
   color: white;
+}
+
+.addNewTransaction{
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  margin: 10px;
+  border: 2px solid #353636;
+  padding: 20px;
+  margin-top: 50px;
+  box-shadow: 0 4px 8px 0 rgba(39, 39, 39, 0.2);
+  
+}
+.addNewTransaction input, select{
+  width: 100%;
+  padding: 5px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+
+.addNewTransaction h2{
+  text-align: center;
+  
+}
+.addNewTransaction button{
+  background-color: blue;
+  width: 100%;
+  padding: 10px;
+  margin: 10px;
+}
+.addNewTransaction button:hover{
+  background-color: aqua;
 }
