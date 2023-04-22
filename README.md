@@ -6,7 +6,7 @@ Using a table, this React application shows a list of all financial transactions
 The pictures as shown depict the outlook of the web app
 
 ## Home Page ##
-![Home Page](./media/HomePage.png)
+![Home Page](./media/Homepage.png)
 
 ## Add Transaction ##
 ![Add New Transaction](./media/AddTransaction.png)
