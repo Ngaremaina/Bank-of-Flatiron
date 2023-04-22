@@ -18,9 +18,16 @@ function App() {
   const handleAddTransaction = (newTransaction) => {
     setTransactions([...transactions, newTransaction])
   }
+  const fetchDescription = (search) => {
+    const fetchResults = transactions.filter(transaction => transaction.description === search)
+    setTransactions(fetchResults)
+    
+  }
+
+
   return (
     <div className="App">
-      <Header />
+      <Header getDescription = {fetchDescription}/>
       <TransactionList transactions = {transactions}/>
       <NewTransaction transactions = {transactions} onTransactionSubmit={handleAddTransaction}/>
     </div>
