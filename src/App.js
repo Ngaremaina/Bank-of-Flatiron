@@ -4,6 +4,7 @@ import Header from './Header';
 import TransactionList from './TransactionList';
 import NewTransaction from './NewTransaction';
 
+
 function App() {
   const [transactions, setTransactions] = useState([])
 
@@ -30,14 +31,24 @@ function App() {
   const handleDeleteTransaction = (deletedTransaction) => {
     setTransactions(transactions.filter((transaction) => transaction.id !== deletedTransaction));
   }
+  //Sorting the transactions by category
+  function sortByCategory() {
+    const sortedTransactions = [...transactions].sort((a, b) => a.category.localeCompare(b.category));
+    setTransactions(sortedTransactions);
+  }
+  //Sorting the transactions by description
+  function sortByDescription() {
+    const sortedTransactions = [...transactions].sort((a, b) => a.description.localeCompare(b.description));
+    setTransactions(sortedTransactions);
+  }
+  
 
   //Calling our components
   return (
     <div className="App">
       <Header getDescription = {fetchDescription}/>
-      <TransactionList transactions = {transactions} onDeleteTransaction={handleDeleteTransaction}/>
+      <TransactionList transactions = {transactions} onDeleteTransaction={handleDeleteTransaction} sortByCategory = {sortByCategory} sortByDescription={sortByDescription}/>
       <NewTransaction onTransactionSubmit={handleAddTransaction}/>
-     
     </div>
   );
 }

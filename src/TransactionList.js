@@ -1,7 +1,7 @@
 import React from "react";
 import TransactionItem from "./TransactionItem";
 
-function TransactionList({transactions, onDeleteTransaction, onUpdateTransaction}){
+function TransactionList({transactions, onDeleteTransaction, onUpdateTransaction,sortByCategory, sortByDescription}){
    
     // Displaying the transactions from the json server
     const displayTransactions = transactions.map(transaction => {
@@ -12,12 +12,14 @@ function TransactionList({transactions, onDeleteTransaction, onUpdateTransaction
     return (
         //displaying the table
         <div>
+            
+            
             <table id="home">
                 <tr>
                     <th>ID</th>
                     <th>Date</th>
-                    <th>Category</th>
-                    <th>Description</th>
+                    <th>Category<button className="buttonCategory" onClick={sortByCategory} style={{float: 'right'}}><i class="fa fa-sort"></i></button>{/*Button that will handle sorting by category*/}</th>
+                    <th>Description<button className="buttonDescription" onClick={sortByDescription} style={{float: 'right'}}><i class="fa fa-sort"></i></button>{/*Button that will handle sorting by description*/}</th>
                     <th>Amount</th>
                     <th>Delete</th>
                    

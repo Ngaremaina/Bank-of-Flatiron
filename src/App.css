@@ -41,8 +41,9 @@
   color: white;
 }
 
-.deletebutton{
+.deletebutton, .buttonDescription, .buttonCategory{
   font-size: 18px;
+  margin: 5px;
 }
 .deletebutton:hover{
   background-color: red;
@@ -78,5 +79,22 @@
 }
 .addNewTransaction button:hover{
   background-color: aqua;
+}
+
+.buttonCategory{
+  background-color: green;
+  color: white;
+}
+.buttonCategory:hover{
+  background-color: lawngreen;
+}
+
+.buttonDescription{
+  background-color: yellow;
+}
+
+.buttonDescription:hover{
+  background-color: yellowgreen;
+  
 }
 

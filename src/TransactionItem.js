@@ -21,8 +21,7 @@ function TransactionItem({amount, category, date, description, id, onDeleteTrans
             <td>{category}</td>
             <td>{description}</td>
             <td>{amount}</td>
-            <td><button class="deletebutton" style={{float: 'left'}} onClick={handleDelete}><i class="fa fa-trash-o" aria-hidden="true"></i></button></td>  
-        
+            <td><button class="deletebutton" style={{float: 'left'}} onClick={handleDelete}><i class="fa fa-trash-o" aria-hidden="true"></i></button></td>   
             
         </tr>
     )

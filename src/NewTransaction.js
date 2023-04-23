@@ -51,6 +51,7 @@ function NewTransaction({onTransactionSubmit}){
                     <option>Transportation</option>
                     <option>Entertainment</option>
                     <option>Housing</option>
+                    
                 </select>
             </label>
             <button>Submit</button>
